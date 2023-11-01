@@ -7,5 +7,8 @@ namespace DSCC.CW1._11904_API.DBContext
     {
         public ProductContext(DbContextOptions<ProductContext> options) : base(options) { }
         public DbSet<Product> Products { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            => optionsBuilder.UseNpgsql("Host=localhost;Database=Product;Username=postgres;Password=root");
     }
 }

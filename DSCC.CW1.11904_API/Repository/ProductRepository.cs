@@ -30,15 +30,16 @@ namespace DSCC.CW1._11904_API.Repository
             _dbContext.Add(product);
             Save();
         }
-        public void Save()
-        {
-            _dbContext.SaveChanges();
-        }
         public void UpdateProduct(Product product)
         {
             _dbContext.Entry(product).State =
             Microsoft.EntityFrameworkCore.EntityState.Modified;
             Save();
         }
+        public void Save()
+        {
+            _dbContext.SaveChanges();
+        }
+      
     }
 }
