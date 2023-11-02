@@ -1,5 +1,6 @@
 ﻿using DSCC.CW1._11904_API.DBContext;
 using DSCC.CW1._11904_API.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace DSCC.CW1._11904_API.Repository
 {
@@ -32,8 +33,7 @@ namespace DSCC.CW1._11904_API.Repository
         }
         public void UpdateProduct(Product product)
         {
-            _dbContext.Entry(product).State =
-            Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _dbContext.Entry(product).State = EntityState.Modified;
             Save();
         }
         public void Save()
