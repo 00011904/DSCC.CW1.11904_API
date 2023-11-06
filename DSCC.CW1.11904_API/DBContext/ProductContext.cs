@@ -9,6 +9,6 @@ namespace DSCC.CW1._11904_API.DBContext
         public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Product;Username=postgres;Password=root");
+            => optionsBuilder.UseNpgsql("Host=database-1.c2uh0ejdy9ez.eu-north-1.rds.amazonaws.com;Port=5432;Database=Product;Username=postgres;Password=00011904");
     }
 }
